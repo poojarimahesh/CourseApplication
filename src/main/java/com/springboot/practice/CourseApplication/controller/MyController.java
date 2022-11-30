@@ -31,7 +31,7 @@ public class MyController {
 	
 	
 	//http://localhost:8080/courses/504/Introduction%20to%20Junit/Coding%20Blocks/Intro%20to%20JUnit/Coursera
-	@PostMapping("/courses/{courseId}/{courseTitle}/{courseAuthor}/{courseDescription}/{courseSource}")
+	@GetMapping("/courses/{courseId}/{courseTitle}/{courseAuthor}/{courseDescription}/{courseSource}")
 	public Course addCourse(@PathVariable String courseId,@PathVariable String courseTitle , @PathVariable String courseAuthor , @PathVariable String courseDescription, @PathVariable String courseSource) {
 		return this.courseService.addCourse(Integer.parseInt(courseId),courseTitle,courseAuthor,courseDescription,courseSource);
 	}
